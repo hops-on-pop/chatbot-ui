@@ -133,7 +133,7 @@ export const ChatInput = ({
       });
       handlePromptSelect(selectedPrompt);
     }
-    setShowPromptList(false);
+    setShowPromptList(true);
   };
 
   const handleKeyDown = (e: KeyboardEvent<HTMLTextAreaElement>) => {
@@ -200,7 +200,7 @@ export const ChatInput = ({
     setVariables(parsedVariables);
 
     if (parsedVariables.length > 0) {
-      setIsModalVisible(true);
+      setIsModalVisible(false);
     } else {
       setContent((prevContent) => {
         const updatedContent = prevContent?.replace(/\/\w*$/, prompt.content);
